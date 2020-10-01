@@ -1,4 +1,4 @@
-/*CSS RESET*/
+/* CSS RESET */
 html, body, div, span, applet, object, iframe,  
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
 a, abbr, acronym, address, big, cite, code,  
@@ -19,7 +19,7 @@ font-size: 100%;
 font: inherit;  
 vertical-align: baseline;  
 }
-/*GENERAL STYLES*/
+/* GENERAL STYLES */
 html{
     font-size:62.5%;
 }
@@ -63,7 +63,7 @@ img:hover {
     opacity: 80%;	
 }	
 
-/*HEADER STYLES */
+/* HEADER STYLES */
 header{
     display:flex;
     justify-content: center;
@@ -81,7 +81,7 @@ nav span{
     border-left:3px solid #626262;
 
 }
-/*Title Section Styles*/
+/* Title Section Styles */
 .title-container{
     display:flex;
     flex-wrap: wrap;
@@ -119,7 +119,7 @@ button:hover{
     color:white;
     box-shadow: 2px 2px 1px white;
 }
-/*Artists Section Styles */
+/* Artists Section Styles */
 .artists-container{
     display:flex;
     justify-content: space-around;
@@ -134,3 +134,38 @@ button:hover{
 .artist img{
     width:100%;
 }
+/* media query setting a max width of 500px, font-size 2rem relative to root, padding 10px  */
+@media only screen and (max-width: 500px){
+  nav {
+    min-width: 60%; 
+    font-size: 2rem;
+    padding: 0 10px; 
+  }  
+  
+.title-container div {
+    width: 100%;
+    min-height: 300px;
+    margin: 10% 0 2% 0;
+  }
+
+.title-container hr {
+    width: 100%;
+  }
+
+.artists-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+  }
+
+.artist {
+    width: 100%;
+  }
+
+.artist img {
+    object-fit: contain;
+    height: 100%;
+    width: 70%;
+  }
+}  
